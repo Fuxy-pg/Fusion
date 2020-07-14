@@ -1,4 +1,4 @@
-package com.fuxy.fusion.processor.cache;
+package com.fuxy.fusion.cache;
 
 /**
  * 缓存管理类，用来缓存Fusion聚合过程中查询的结果，针对同一查询结果，在短时间内，
