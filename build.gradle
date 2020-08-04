@@ -10,14 +10,15 @@ plugins {
 repositories {
     mavenLocal()
     maven {
-        url = uri('http://repo.maven.apache.org/maven2')
+        url = uri('http://maven.aliyun.com/nexus/content/groups/public/')
     }
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.3.1.RELEASE'
     implementation 'org.projectlombok:lombok:1.18.12'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.3.1.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.3.1.RELEASE'
 }
 
 group = 'com.fuxy'
