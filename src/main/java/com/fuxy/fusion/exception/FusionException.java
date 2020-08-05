@@ -6,4 +6,5 @@ package com.fuxy.fusion.exception;
  * @author JasonFuxy
  */
 public class FusionException {
+
 }
