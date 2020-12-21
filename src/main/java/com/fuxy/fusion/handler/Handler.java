@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+/**
+ * @author JasonFuxy
+ */
 public class Handler {
 
     public static int[] charge(int[] nums1, int[] nums2){
@@ -58,14 +61,83 @@ public class Handler {
         return result;
     }
 
-    public static void main(String[] args) {
-        int[] nums1 = new int[]{1,3,5,2,4};
-        int[] nums2 = new int[]{6,5,4,3,2,1,7};
-        int[] charge = charge(nums1, nums2);
-        for (int i = 0; i < charge.length; i++) {
-            System.out.println(charge[i]);
+    public boolean exist(char[][] board, String word) {
+        if(board.length == 0 || null == word || "".equals(word)){
+            return false;
         }
+
+        for(int i = 0; i< board.length; i++){
+            int flag = word.length();
+            for(int j = 0; j < board[i].length; j++){
+                if(board[i][j] == (word.charAt(--flag))){
+                    --flag;
+                    if(((i - 1 >= 0 && board[i - 1][j] == (word.charAt(flag)))) || ((j - 1) >= 0 && board[i][j - 1] == (word.charAt(flag))) || ((j + 1 <= board[i].length) && board[i][j + 1] == (word.charAt(flag))) || ((i + 1 <= board[i].length) && board[i + 1][j] == (word.charAt(flag)))){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                }
+
+
+            }
+        }
+        return false;
+
     }
+
+    public int movingCount(int m, int n, int k) {
+        int result = 0;
+        for(int i = 0; i <= m - 1; i++){
+            for(int j = 0; j <= n- 1; j++){
+                int temp = 2 * i + 2 * j - 2;
+                if(temp <= k){
+
+
+                    result++;
+                }
+            }
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        if(a + b <= c){
+
+        }
+
+        ListNode head = new ListNode(1);
+
+        ListNode second = new ListNode(3);
+
+        ListNode third = new ListNode(2);
+        head.next = second;
+        second.next = third;
+
+
+        List<Integer> list = new ArrayList();
+
+        while(head != null){
+            list.add(head.val);
+            head = head.next;
+        }
+
+        int[] result = new int[list.size()];
+        for(int i = 0; i <= list.size() - 1; i++){
+            result[list.size() -1 - i] = list.get(i);
+        }
+        System.out.println(result);
+
+    }
+
+     public static class ListNode {
+      int val;
+     ListNode next;
+      ListNode(int x) { val = x; }
+  }
+
 
 
 
