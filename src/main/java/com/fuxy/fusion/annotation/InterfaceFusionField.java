@@ -50,4 +50,5 @@ public @interface InterfaceFusionField {
      */
     Class clazz() default Collection.class;
 
+
 }
