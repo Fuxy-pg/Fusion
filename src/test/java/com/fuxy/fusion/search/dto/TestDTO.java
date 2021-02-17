@@ -1,5 +1,6 @@
 package com.fuxy.fusion.search.dto;
 
+import com.fuxy.fusion.annotation.Fusion;
 import com.fuxy.fusion.annotation.FusionConditionField;
 import lombok.Builder;
 import lombok.Data;
