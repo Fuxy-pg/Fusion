@@ -1,11 +1,10 @@
 package com.fuxy.fusion.annotation;
 
 import java.lang.annotation.*;
-import java.util.Collection;
 
 /**
  *
- * 标示Dto中聚合结果中的关联条件。
+ * 标示当前Dto为目标类
  *
  * <p>
  *  该注解用于在目标方法执行完之后，结果集于当前Dto的关联条件字段。通过这个字段能够关联起来执行结果于Dto中的字段。
@@ -21,7 +20,7 @@ import java.util.Collection;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})
-public @interface FusionConditionField {
+public @interface Fusion {
 
     /**
      * 聚合条件字段

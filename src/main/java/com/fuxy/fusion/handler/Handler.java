@@ -123,6 +123,8 @@ public class Handler {
             list.add(head.val);
             head = head.next;
         }
+        StringBuilder stringBuilder = new StringBuilder();
+        StringBuffer stringBuffer = new StringBuffer();
 
         int[] result = new int[list.size()];
         for(int i = 0; i <= list.size() - 1; i++){

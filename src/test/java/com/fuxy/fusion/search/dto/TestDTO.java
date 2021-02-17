@@ -1,5 +1,6 @@
-package com.fuxy.fusion.test;
+package com.fuxy.fusion.search.dto;
 
+import com.fuxy.fusion.annotation.FusionConditionField;
 import lombok.Builder;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -12,12 +13,12 @@ import lombok.experimental.Accessors;
  *    暂时先放入二十个属性，且这二十个属性都是待聚合的字段，来测试搜寻器的性能！
  * </p>
  *
- * @author jasonfuxy
+ * @author JasonFu
  */
 @Accessors(chain = true)
 @Data
 @Builder
-public class SearchTestClass {
+public class TestDTO {
 
     private String fusionField_1;
 
@@ -29,9 +30,9 @@ public class SearchTestClass {
 
     private String fusionField_5;
 
-    private String fusionField_6;
+    // private String fusionField_6;
 
-    private String fusionField_7;
+    /*private String fusionField_7;
 
     private String fusionField_8;
 
@@ -57,6 +58,6 @@ public class SearchTestClass {
 
     private String fusionField_19;
 
-    private String fusionField_20;
+    private String fusionField_20;*/
 
 }
